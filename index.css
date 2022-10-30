@@ -86,7 +86,7 @@ body {
   align-items: center;
 }
 .item-added h3 {
-  width: 30%;
+  width: 40%;
 
   text-align: left;
 }
@@ -95,7 +95,7 @@ body {
   width: 15%;
 }
 .item-added .price {
-  width: 55%;
+  width: 40%;
   text-align: right;
 }
 
@@ -111,7 +111,7 @@ body {
   bottom: 0;
   left: 0;
   flex-direction: row-reverse;
-  margin: 3em auto;
+  margin: 2em auto;
   width: 80%;
   max-width: 570px;
   height: 500px;

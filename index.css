@@ -111,7 +111,7 @@ body {
   bottom: 0;
   left: 0;
   flex-direction: row-reverse;
-  margin: 11em auto;
+  margin: 5em auto;
   width: 80%;
   max-width: 570px;
   height: 500px;
@@ -267,5 +267,8 @@ button {
   .place-order {
     min-width: 420px;
     width: 40%;
+  }
+  .modal {
+    margin: 11em auto;
   }
 }

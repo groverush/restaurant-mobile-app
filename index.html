@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant-mobile-app</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/a3b0041fbf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="restaurant-title">Jimmy's Diner</h1>
+      <p>The best burgers and pizzas in town.</p>
+    </header>
+    <main>
+      <div class="container">
+        <section class="menu-diner-section" id="menu-dinner-section"></section>
+
+        <section class="place-order" id="place-order">
+          <h3 class="order-title">Your order</h3>
+          <div class="ticket-order">
+            <div class="products-added" id="products-added"></div>
+
+            <div class="total-price">
+              <h3>Total price:</h3>
+              <span class="total-price" id="total-price">$</span>
+            </div>
+          </div>
+          <button class="complete-order-btn" id="complete-order-btn">
+            Complete order
+          </button>
+        </section>
+        <div class="payment-completed" id="payment-completed"></div>
+      </div>
+    </main>
+    <div class="modal" id="modal">
+      <div class="close-modal-btn-container">
+        <button class="modal-close-btn" id="modal-close-btn">X</button>
+      </div>
+      <div class="modal-inner" id="modal-inner">
+        <h2>Enter card details</h2>
+        <form id="payment-form">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            aria-label="name"
+            required
+          />
+          <input
+            type="number"
+            name="card-number"
+            id="card-number"
+            placeholder="Enter your card number"
+            aria-label="card-number"
+            required
+          />
+
+          <input
+            type="number"
+            name="cvv"
+            id="cvv"
+            placeholder="Enter CVV"
+            aria-label="cvv"
+            required
+          />
+
+          <div class="modal-payment-btn" id="modal-payment-btn">
+            <button type="submit" class="modal-btn" id="pay-btn">Pay</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

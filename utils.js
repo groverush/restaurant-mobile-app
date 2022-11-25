@@ -1,21 +1,21 @@
 import { menuDinner, renderTicketHtml } from './index.js'
 
-function removeItem(idOrder) {
+function removeItem(idOrder, placeOrders) {
     let indexDeleteOrder = 0
-    const deleteItem = menuDinner.placeOrders.filter((order, index) => {
+    const deleteItem = placeOrders.filter((order, index) => {
         if (order.uuid === idOrder) {
             indexDeleteOrder = index
             return indexDeleteOrder
         }
     }
     )[0];
-    menuDinner.placeOrders.splice(indexDeleteOrder, 1)
-    if (menuDinner.placeOrders.length === 0) {
+    placeOrders.splice(indexDeleteOrder, 1)
+    if (placeOrders.length === 0) {
         document.getElementById("place-order").style.display = "none"
         localStorage.clear()
     } else {
-        renderTicketHtml(menuDinner.placeOrders)
-        localStorage.setItem('tickets', JSON.stringify(menuDinner.placeOrders))
+        renderTicketHtml(placeOrders)
+        localStorage.setItem('tickets', JSON.stringify(placeOrders))
     }
 
 

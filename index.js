@@ -1,10 +1,11 @@
 import { menuArray } from './data.js'
 import Menu from './Menu.js'
 import { getTotalPrice, removeItem, payCompleteText } from "./utils.js"
-export let localOrders = JSON.parse(localStorage.getItem('tickets'))
 
-export const menuDinner = new Menu(menuArray)
 const paymentForm = document.getElementById('payment-form')
+
+export let localOrders = JSON.parse(localStorage.getItem('tickets'))
+export const menuDinner = new Menu(menuArray)
 
 if (localOrders) {
     menuDinner.placeOrders = localOrders
@@ -28,7 +29,7 @@ document.addEventListener("click", (e) => {
     }
     else if (e.target.dataset.remove) {
 
-        removeItem(e.target.dataset.remove)
+        removeItem(e.target.dataset.remove, menuDinner.placeOrders)
     } else if (e.target.id === 'complete-order-btn') {
         completeOrderBtn()
     } else if (e.target.id === 'modal-close-btn') {
